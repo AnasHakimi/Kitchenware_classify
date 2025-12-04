@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchenware Classifier AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Kitchenware Classifier AI</h1>
+            <p>Upload an image to identify the kitchenware item.</p>
+        </header>
+
+        <main>
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-content">
+                    <svg class="upload-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+                    <p>Drag & Drop your image here or <span class="browse-btn">Browse</span></p>
+                    <input type="file" id="fileInput" accept="image/*" hidden>
+                </div>
+            </div>
+
+            <div class="preview-section" id="previewSection" style="display: none;">
+                <img id="imagePreview" src="" alt="Preview">
+                <button id="analyzeBtn" class="primary-btn">Analyze Image</button>
+            </div>
+
+            <div class="results-section" id="resultsSection" style="display: none;">
+                <h2>Analysis Results</h2>
+                <div class="chart-container" id="chartContainer">
+                    <!-- Bars will be injected here -->
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by PyTorch & FastAPI</p>
+        </footer>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
